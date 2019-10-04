@@ -10,13 +10,13 @@ Project 4
 #include "minHeap.h"
 
 template <class KeyType>
-class MinPriorityQueue : public MinHeap<KeyType>
+class MinPriorityQueue : public minHeap<KeyType>
 {
   public:
   MinPriorityQueue(); // default constructor
   MinPriorityQueue(int n); // construct an empty MPQ with capacity n
   MinPriorityQueue(const MinPriorityQueue<KeyType>& pq); // copy constructor
-  // Destructor inherited from MinHeap<KeyType>
+  // Destructor inherited from minHeap<KeyType>
 
 
   KeyType* minimum() const; // return the minimum element
@@ -28,19 +28,19 @@ class MinPriorityQueue : public MinHeap<KeyType>
   bool empty() const; // return whether the MPQ is empty
   int length() const; // return the number of keys
   std::string toString() const; // return a string representation of the MPQ
-  // Assignment operator inherited from MinHeap<KeyType>
-  // Specify that MPQ will be referring to the following members of MinHeap<KeyType>.
+  // Assignment operator inherited from minHeap<KeyType>
+  // Specify that MPQ will be referring to the following members of minHeap<KeyType>.
 
-  using MinHeap<KeyType>::A;
-  using MinHeap<KeyType>::heapSize;
-  using MinHeap<KeyType>::capacity;
-  using MinHeap<KeyType>::parent;
-  using MinHeap<KeyType>::swap;
-  using MinHeap<KeyType>::heapify;
+  using minHeap<KeyType>::A;
+  using minHeap<KeyType>::heapSize;
+  using minHeap<KeyType>::capacity;
+  using minHeap<KeyType>::parent;
+  using minHeap<KeyType>::swap;
+  using minHeap<KeyType>::heapify;
 
   /* The using statements are necessary to resolve ambiguity because
   these members do not refer to KeyType. Alternatively, you could
-  use this->heapify(0) or MinHeap<KeyType>::heapify(0).
+  use this->heapify(0) or minHeap<KeyType>::heapify(0).
   */
 };
 

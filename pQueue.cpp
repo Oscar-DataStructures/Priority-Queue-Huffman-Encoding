@@ -103,7 +103,7 @@ PostConditions:
 
 
 template <class KeyType>
-bool MinPriorityQueue<KeyType>::bool empty() const
+bool MinPriorityQueue<KeyType>::empty() const
 /*
 PreConditions:
 PostConditions:
@@ -115,7 +115,7 @@ PostConditions:
 
 
 template <class KeyType>
-int MinPriorityQueue<KeyType>::int length() const;
+int MinPriorityQueue<KeyType>::length() const
 /*
 PreConditions:
 PostConditions:
